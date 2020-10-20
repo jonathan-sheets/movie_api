@@ -1,0 +1,42 @@
+URL: /
+Timestamp: Tue Oct 20 2020 13:39:06 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:39:06 GMT-0600 (Mountain Daylight Time)
+
+URL: /documentation
+Timestamp: Tue Oct 20 2020 13:39:13 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:39:13 GMT-0600 (Mountain Daylight Time)
+
+URL: /
+Timestamp: Tue Oct 20 2020 13:43:54 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:43:54 GMT-0600 (Mountain Daylight Time)
+
+URL: /documentation
+Timestamp: Tue Oct 20 2020 13:44:05 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:44:05 GMT-0600 (Mountain Daylight Time)
+
+URL: /home
+Timestamp: Tue Oct 20 2020 13:45:24 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:45:24 GMT-0600 (Mountain Daylight Time)
+
+URL: /asdffjke
+Timestamp: Tue Oct 20 2020 13:45:40 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:45:40 GMT-0600 (Mountain Daylight Time)
+
+URL: /
+Timestamp: Tue Oct 20 2020 13:47:03 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 13:47:03 GMT-0600 (Mountain Daylight Time)
+
