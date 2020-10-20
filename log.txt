@@ -40,3 +40,15 @@ Timestamp: Tue Oct 20 2020 13:47:03 GMT-0600 (Mountain Daylight Time)
 URL: /favicon.ico
 Timestamp: Tue Oct 20 2020 13:47:03 GMT-0600 (Mountain Daylight Time)
 
+URL: /
+Timestamp: Tue Oct 20 2020 14:31:52 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 14:31:52 GMT-0600 (Mountain Daylight Time)
+
+URL: /documentation
+Timestamp: Tue Oct 20 2020 14:32:02 GMT-0600 (Mountain Daylight Time)
+
+URL: /favicon.ico
+Timestamp: Tue Oct 20 2020 14:32:02 GMT-0600 (Mountain Daylight Time)
+
