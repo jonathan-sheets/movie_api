@@ -18,7 +18,7 @@ http.createServer((request, response) => {
             throw err;
         }
 
-        response.writeHead(200, { 'Content-Type': 'text/htmnl' });
+        response.writeHead(200, { 'Content-Type': 'text/html' });
         response.write(data);
         response.end();
 
