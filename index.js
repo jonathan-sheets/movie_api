@@ -10,7 +10,48 @@ app.use((err, req, res, next) => {
     res.status(500).send('Oops, something went wrong!');
 });
 
-let topMovies = [];
+let topMovies = [
+    {
+    title: "movie one",
+    description: "top ten movie"
+    },
+    {
+    title: "movie two",
+    description: "top ten movie"
+    },
+    {
+    title: "movie three",
+    description: "top ten movie"
+    },
+    {
+    title: "movie four",
+    description: "top ten movie"
+    },
+    {
+    title: "movie five",
+    description: "top ten movie"
+    },
+    {
+    title: "movie six",
+    description: "top ten movie"
+    },
+    {
+    title: "movie seven",
+    description: "top ten movie"
+    },
+    {
+    title: "movie eight",
+    description: "top ten movie"
+    },
+    {
+    title: "movie nine",
+    description: "top ten movie"
+    },
+    {
+    title: "movie ten",
+    description: "top ten movie"
+    }
+];
 
 app.get('/movies', (req, res) => {
     res.json(topMovies);
