@@ -17,63 +17,105 @@
         <section>
             <table>
                 <tr>
-                    <th>Request</th>
-                    <th>Request Method</th>
+                    <th>Request Description</th>
                     <th>URL Endpoint</th>
-                    <th>Response</th>
+                    <th>Request Method</th>
+                    <th>URL Query Parameters</th>
+                    <th>Request Body</th>
+                    <th>Response Format</th>
                 </tr>
                 <tr>
                     <td>Get a list of all movies</td>
+                    <td>/movies</td>
                     <td>GET</td>
                     <td>/movies</td>
+                    <td>None</td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Return data about a single movie by title</td>
+                    <td>/movies/Terminator</td>
                     <td>GET</td>
                     <td>/movies/:Title</td>
+                    <td>None</td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Return data about genre of a single movie by title</td>
+                    <td>/movies/genres/Terminator</td>
                     <td>GET</td>
                     <td>/movies/genres/:Title</td>
+                    <td>None</td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Return data about a director by name</td>
+                    <td>/movies/directors/James%20Cameron</td>
                     <td>GET</td>
                     <td>/movies/directors/:Name</td>
+                    <td>None</td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Allow new users to register</td>
+                    <td>/users</td>
                     <td>POST</td>
                     <td>/users</td>
+                    <td>JSON object holding user data:
+                        <br>
+                        <br>
+                        { <br>
+                        Username: New_User, <br>
+                        Password: password, <br>
+                        Email: example@abc.com <br>
+                        Date of Birth: "" <br>
+                        }
+                        <br>
+                        <br>
+                    </td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Allow users to update their user info (username)</td>
+                    <td>/users</td>
                     <td>PUT</td>
                     <td>/users/:Username</td>
+                    <td>JSON object holding user data:
+                        <br>
+                        <br>
+                        { <br>
+                        Username: New_User, <br>
+                        Password: password, <br>
+                        Email: example@abc.com <br>
+                        Date of Birth: "" <br>
+                        }
+                        <br>
+                        <br>
+                    </td>
                     <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Allow users to add a movie to their list of favorites</td>
+                    <td>/users/New_User/favorites/</td>
                     <td>POST</td>
                     <td>/users/:Username/favorites/:movieID</td>
+                    <td>None</td>
                     <td>Message (text)</td>
                 </tr>
                 <tr>
                     <td>Allow users to remove a movie from their list of favorites</td>
+                    <td>/users/New_User/favorites/</td>
                     <td>DELETE</td>
                     <td>/users/:Username/favorites/:movieID</td>
+                    <td>None</td>
                     <td>Message (text)</td>
                 </tr>
                 <tr>
                     <td>Allow existing users to deregister</td>
+                    <td>/users/New_User</td>
                     <td>DELETE</td>
                     <td>/users/:Username</td>
+                    <td>None</td>
                     <td>Message (text)</td>
                 </tr>
             </table>
