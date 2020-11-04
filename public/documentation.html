@@ -65,7 +65,7 @@
                         <br>
                         <br>
                         { <br>
-                        Username: New_User, <br>
+                        Username: kylereese, <br>
                         Password: password, <br>
                         Email: example@abc.com <br>
                         Birthday: YYYY/MM/DD <br>
@@ -84,7 +84,7 @@
                         <br>
                         <br>
                         { <br>
-                        Username: New_User, <br>
+                        Username: kylereese, <br>
                         Password: password, <br>
                         Email: example@abc.com <br>
                         Birthday: 01/07/1986 <br>
@@ -96,23 +96,35 @@
                 </tr>
                 <tr>
                     <td>Allow users to add a movie to their list of favorites</td>
-                    <td>/users/New_User/favorites/</td>
+                    <td>/users/kylereese/favorites/</td>
                     <td>POST</td>
                     <td>/users/:Username/favorites/:movieID</td>
-                    <td>None</td>
-                    <td>Message (text)</td>
+                    <td>JSON object
+                        <br>
+                        <br>
+                        { <br>
+                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]
+                        }
+                    </td>
+                    <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Allow users to remove a movie from their list of favorites</td>
-                    <td>/users/New_User/favorites/</td>
+                    <td>/users/kylereese/favorites/</td>
                     <td>DELETE</td>
                     <td>/users/:Username/favorites/:movieID</td>
-                    <td>None</td>
-                    <td>Message (text)</td>
+                    <td>JSON object
+                        <br>
+                        <br>
+                        { <br>
+                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]
+                        }
+                    </td>
+                    <td>JSON</td>
                 </tr>
                 <tr>
                     <td>Allow existing users to deregister</td>
-                    <td>/users/New_User</td>
+                    <td>/users/kylereese</td>
                     <td>DELETE</td>
                     <td>/users/:Username</td>
                     <td>None</td>
