@@ -6,7 +6,10 @@ const express = require("express"),
     Models = require("./models.js"),
     Movies = Models.Movie,
     Users = Models.User;
-    
+
+// mongoose.connect('mongodb://localhost:27017/flixNETDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });    
+
 const passport = require('passport');
 require('./passport');
 
@@ -25,9 +28,7 @@ app.use(cors({
     }
 }));
 
-// mongoose.connect('mongodb://localhost:27017/flixNETDB', { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
 
