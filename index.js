@@ -10,6 +10,8 @@ const express = require("express"),
 // mongoose.connect('mongodb://localhost:27017/flixNETDB', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });    
 
+const app = express();
+
 const passport = require('passport');
 require('./passport');
 
@@ -30,7 +32,7 @@ app.use(cors({
 
 
 
-const app = express();
+
 
 app.use(bodyParser.json());
 
