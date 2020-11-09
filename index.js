@@ -30,10 +30,6 @@ app.use(cors({
     }
 }));
 
-
-
-
-
 app.use(bodyParser.json());
 
 let auth = require('./auth')(app);
@@ -184,7 +180,14 @@ app.get('/users/:Username', passport.authenticate('jwt', { session: false }),
     (required)
     Birthday: Date
 } */
-app.put('/users/:Username', passport.authenticate('jwt', { session: false }), 
+app.put('/users/:Username'
+[
+    check('Username', 'Username is required').isLength({min: 5}),
+    check('Username', 'Username contains non alphanumeric characters - not allowed.').isAlphanumeric(),
+    check('Password', 'Password is required').not().isEmpty(),
+    check('Email', 'Email does not appear to be valid').isEmail()
+], 
+passport.authenticate('jwt', { session: false }), 
   (req, res) => {
     Users.findOneAndUpdate({ Username: req.params.Username }, { $set:
     {
