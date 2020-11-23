@@ -22,6 +22,7 @@ let allowedOrigins = [
     'http://localhost:8080', 
     'http://testsite.com', 
     'http://localhost:1234',
+    'https://flixnet-2020.herokuapp.com',
     'https://flixnet2020.netlify.app/'
 ];
 app.use(cors({
