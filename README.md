@@ -16,6 +16,6 @@ The server-side component of a "movies" web application that provides users with
 https://flixnet-2020.herokuapp.com/
 
 ## Documentation
-JSDoc documentation can be found in the "out" directory.  Additional details regarding API endpoints and request/response information can be found in the documentation.html file in the "public" directory.  
+JSDoc documentation can be found in the "_out_" directory.  Additional details regarding API endpoints and request/response information can be found in the _documentation.html_ file in the "_public_" directory.  
 
-See index.js file for the logic pertaining to each API endpoint.
+See the _index.js_ file for the logic pertaining to each API endpoint.
