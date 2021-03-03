@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang=en>
     <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Documentation</title>
     </head>
 
     <body>
         <header>
-            <h1>Movie API project</h1>
+            <h1>flixNET API project</h1>
             <h2>Create a REST API with Node.js</h2>
         </header>
         <section>
-            <h3>Objective</h3>
+            <h3>Objective:</h3>
             <p>Build the server-side component of a "movies" web application where users will be able to access information about different movies, directors, and genres.  Users will also be able to sign up, update their personal information, and create a list of their favorite movies.</p>
         </section>
-        <section>
+        <div>
             <table>
                 <tr>
                     <th>Request Description</th>
@@ -33,7 +34,7 @@
                     <td>JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a single movie by title</td>
+                    <td>Return data about a single movie by title (use %20 for spaces)</td>
                     <td>/movies/Terminator</td>
                     <td>GET</td>
                     <td>/movies/:title</td>
@@ -41,15 +42,15 @@
                     <td>JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a genre by name</td>
-                    <td>/movies/genres</td>
+                    <td>Return data about a genre by name (use %20 for spaces)</td>
+                    <td>/movies/genres/Action</td>
                     <td>GET</td>
                     <td>/movies/genres/:name</td>
                     <td>None</td>
                     <td>JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a director by name</td>
+                    <td>Return data about a director by name (use %20 for spaces)</td>
                     <td>/movies/directors/James%20Cameron</td>
                     <td>GET</td>
                     <td>/movies/directors/:name</td>
@@ -131,6 +132,6 @@
                     <td>Message (text)</td>
                 </tr>
             </table>
-        </section>
+        </div>
     </body>
 </html>
