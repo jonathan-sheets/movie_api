@@ -3,67 +3,69 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Documentation</title>
+        <title>flixNET Documentation</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 
-    <body>
+    <body class="mx-auto" style="max-width: 95vw">
         <header>
-            <h1>flixNET API project</h1>
-            <h2>Create a REST API with Node.js</h2>
+            <h2 class="text-center">flixNET API project:</h2> 
+            <h4 class="text-center text-secondary">Create a REST API with Node.js</h4>
         </header>
         <section>
-            <h3>Objective:</h3>
+            <h5 class="text-info">Objective:</h5>
             <p>Build the server-side component of a "movies" web application where users will be able to access information about different movies, directors, and genres.  Users will also be able to sign up, update their personal information, and create a list of their favorite movies.</p>
         </section>
         <div>
-            <table>
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Request Method</th>
+                        <th>Request Description</th>
+                        <th>URL Endpoint</th>
+                        <th>URL Query Parameters</th>
+                        <th>Request Body</th>
+                        <th>Response Format</th>
+                    </tr>
+                </thead>
                 <tr>
-                    <th>Request Description</th>
-                    <th>URL Endpoint</th>
-                    <th>Request Method</th>
-                    <th>URL Query Parameters</th>
-                    <th>Request Body</th>
-                    <th>Response Format</th>
+                    <td class="font-weight-bold text-success align-middle">GET</td>
+                    <td class="align-middle">Get a list of all movies</td>
+                    <td class="align-middle">/movies</td>
+                    <td class="align-middle">/movies</td>
+                    <td class="align-middle">None</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Get a list of all movies</td>
-                    <td>/movies</td>
-                    <td>GET</td>
-                    <td>/movies</td>
-                    <td>None</td>
-                    <td>JSON</td>
+                    <td class="font-weight-bold text-success align-middle">GET</td>
+                    <td class="align-middle">Return data about a single movie by title <br /> (use %20 for spaces)</td>
+                    <td class="align-middle">/movies/Terminator</td>
+                    <td class="align-middle">/movies/:title</td>
+                    <td class="align-middle">None</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a single movie by title (use %20 for spaces)</td>
-                    <td>/movies/Terminator</td>
-                    <td>GET</td>
-                    <td>/movies/:title</td>
-                    <td>None</td>
-                    <td>JSON</td>
+                    <td class="font-weight-bold text-success align-middle">GET</td>
+                    <td class="align-middle">Return data about a genre by name</td>
+                    <td class="align-middle">/movies/genres/Action</td>
+                    <td class="align-middle">/movies/genres/:name</td>
+                    <td class="align-middle">None</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a genre by name (use %20 for spaces)</td>
-                    <td>/movies/genres/Action</td>
-                    <td>GET</td>
-                    <td>/movies/genres/:name</td>
-                    <td>None</td>
-                    <td>JSON</td>
+                    <td class="font-weight-bold text-success align-middle">GET</td>
+                    <td class="align-middle">Return data about a director by name <br /> (use %20 for spaces)</td>
+                    <td class="align-middle">/movies/directors/James%20Cameron</td>
+                    <td class="align-middle">/movies/directors/:name</td>
+                    <td class="align-middle">None</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Return data about a director by name (use %20 for spaces)</td>
-                    <td>/movies/directors/James%20Cameron</td>
-                    <td>GET</td>
-                    <td>/movies/directors/:name</td>
-                    <td>None</td>
-                    <td>JSON</td>
-                </tr>
-                <tr>
-                    <td>Allow new users to register</td>
-                    <td>/users</td>
-                    <td>POST</td>
-                    <td>/users</td>
-                    <td>JSON object holding user data:
-                        <br>
+                    <td class="font-weight-bold text-warning align-middle">POST</td>
+                    <td class="align-middle">Allow new users to register</td>
+                    <td class="align-middle">/users</td>
+                    <td class="align-middle">/users</td>
+                    <td class="align-middle">JSON object holding user data:
                         <br>
                         { <br>
                         Username: kylereese, <br>
@@ -72,17 +74,28 @@
                         Birthday: YYYY/MM/DD <br>
                         }
                         <br>
-                        <br>
                     </td>
-                    <td>JSON</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Allow users to update their user info (username)</td>
-                    <td>/users</td>
-                    <td>PUT</td>
-                    <td>/users/:Username</td>
-                    <td>JSON object holding user data:
+                    <td class="font-weight-bold text-warning align-middle">POST</td>
+                    <td class="align-middle">Allow users to add a movie to their list of favorites</td>
+                    <td class="align-middle">/users/kylereese/favorites/</td>
+                    <td class="align-middle">/users/:Username/favorites/:movieID</td>
+                    <td class="align-middle">JSON object
                         <br>
+                        { <br>
+                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]<br>
+                        }
+                    </td>
+                    <td class="align-middle">JSON</td>
+                </tr>
+                <tr>
+                    <td class="font-weight-bold text-info align-middle">PUT</td>
+                    <td class="align-middle">Allow users to update their user info (username)</td>
+                    <td class="align-middle">/users</td>
+                    <td class="align-middle">/users/:Username</td>
+                    <td class="align-middle">JSON object holding user data:
                         <br>
                         { <br>
                         Username: kylereese, <br>
@@ -91,47 +104,43 @@
                         Birthday: 01/07/1986 <br>
                         }
                         <br>
-                        <br>
                     </td>
-                    <td>JSON</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Allow users to add a movie to their list of favorites</td>
-                    <td>/users/kylereese/favorites/</td>
-                    <td>POST</td>
-                    <td>/users/:Username/favorites/:movieID</td>
-                    <td>JSON object
-                        <br>
+                    <td class="font-weight-bold text-danger align-middle">DELETE</td>
+                    <td class="align-middle">Allow users to remove a movie from their list of favorites</td>
+                    <td class="align-middle">/users/kylereese/favorites/</td>
+                    <td class="align-middle">/users/:Username/favorites/:movieID</td>
+                    <td class="align-middle">JSON object
                         <br>
                         { <br>
-                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]
+                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]<br>
                         }
                     </td>
-                    <td>JSON</td>
+                    <td class="align-middle">JSON</td>
                 </tr>
                 <tr>
-                    <td>Allow users to remove a movie from their list of favorites</td>
-                    <td>/users/kylereese/favorites/</td>
-                    <td>DELETE</td>
-                    <td>/users/:Username/favorites/:movieID</td>
-                    <td>JSON object
-                        <br>
-                        <br>
-                        { <br>
-                            "FavoriteMovies": ["5f9ae0a93bc461d6cbc26250"]
-                        }
-                    </td>
-                    <td>JSON</td>
-                </tr>
-                <tr>
-                    <td>Allow existing users to deregister</td>
-                    <td>/users/kylereese</td>
-                    <td>DELETE</td>
-                    <td>/users/:Username</td>
-                    <td>None</td>
-                    <td>Message (text)</td>
+                    <td class="font-weight-bold text-danger align-middle">DELETE</td>
+                    <td class="align-middle">Allow existing users to deregister</td>
+                    <td class="align-middle">/users/kylereese</td>
+                    <td class="align-middle">/users/:Username</td>
+                    <td class="align-middle">None</td>
+                    <td class="align-middle">Message (text)</td>
                 </tr>
             </table>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+                crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+                crossorigin="anonymous">
+        </script>
     </body>
 </html>
