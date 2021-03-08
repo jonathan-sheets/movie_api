@@ -12,6 +12,10 @@ The server-side component of a "movies" web application that provides users with
 * Includes data validation logic
 * Deployed to Heroku
 
+## Documentation
+
+<img src="./movie_api_doc.png" alt="screnshot of documentation page">
+
 ## Base URL
 https://flixnet-2020.herokuapp.com/
 
